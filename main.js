@@ -8,4 +8,11 @@ const data = [
   { categoria: "dev", nivel: 3 },
 ];
 
+const dataOrder = data.sort((a, b) => a.nivel - b.nivel);
+const unique = data.filter(
+  (v, i, a) => a.findIndex((t) => t.categoria === v.categoria) === i
+);
+
 console.log(data);
+console.log(dataOrder);
+console.log(unique);
