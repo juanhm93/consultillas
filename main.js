@@ -8,6 +8,7 @@ const data = [
   { categoria: "dev", nivel: 3 },
 ];
 
+// Necesitamos quitar los duplicados de las categorias escogiendo el que tenga el mayor nivel
 const dataOrder = data.sort((a, b) => a.nivel - b.nivel);
 const unique = data.filter(
   (item, index, arr) =>
