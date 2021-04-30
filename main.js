@@ -10,7 +10,8 @@ const data = [
 
 const dataOrder = data.sort((a, b) => a.nivel - b.nivel);
 const unique = data.filter(
-  (v, i, a) => a.findIndex((t) => t.categoria === v.categoria) === i
+  (item, index, arr) =>
+    arr.findIndex((thisItem) => thisItem.categoria === item.categoria) === index
 );
 
 console.log(data);
